@@ -1,7 +1,7 @@
 {
   "name": "yandex-metrika",
   "email" : "neizerth@gmail.com",
-  "version": "0.1",
+  "version": "0.1.2-beta",
   "description": "Библиотека для работы с API Яндекс.Метрики",
   "main": "src/YMetrikaRequest.js",
   "scripts": {
