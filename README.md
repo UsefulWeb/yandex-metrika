@@ -5,7 +5,12 @@
 - перейдите [по этой ссылке](https://oauth.yandex.ru/client/new) и добавьте в правах пункт Яндекс.Метрика.
 - Получите OAuth токен по инструкции, описанной [здесь] (https://tech.yandex.ru/oauth/doc/dg/concepts/ya-oauth-intro-docpage/)
 
+## Установка
+```
+npm install yandex-metrika
+```
 ## Использование
+
 ```javascript
 const YMetrikaRequest = require( 'yandex-metrika' ),
   oauth_token = 'OAuth токен',
