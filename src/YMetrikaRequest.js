@@ -116,7 +116,10 @@ class YMetrikaRequest {
    * @return {Promise} Ожидание выполнения запроса ранее, если имеется
    */
   beginRequest() {
-    const constructor = this.constructor;
+    const constructor = this.constructor,
+      timeoutTime = constructor.REQUEST_TIMEOUT,
+      intervalTime = constructor.WAIT_REQUEST_CHECK_INTERVAL,
+      maxActiveClients = constructor.MAX_ACTIVE_CLIENTS;
     let waitTime = constructor.MAX_WAIT_REQUEST_TIMEOUT;
 
     return new Promise(( resolve, reject ) => {
@@ -128,16 +131,16 @@ class YMetrikaRequest {
        */
       const timer = () => {
         const clientsCount = this.activeClientsCount;
-        if ( clientsCount <= constructor.MAX_CLIENTS ) {
+        if ( clientsCount <= maxActiveClients ) {
           return resolve();
         }
-        waitTime -= constructor.WAIT_REQUEST_CHECK_INTERVAL;
+        waitTime -= intervalTime;
         if ( waitTime > 0 ) {
           return setTimeout( timer, 100 );
         }
 
         _clientsCount.set( this, clientsCount - 1 );
-        reject( new Error( `Истекло максимальное время ожидания запроса (${constructor.REQUEST_TIMEOUT} ms.)` ));
+        reject( new Error( `Истекло максимальное время ожидания запроса (${timeoutTime} ms.)` ));
       };
       timer();
     })
@@ -221,7 +224,7 @@ class YMetrikaRequest {
 }
 
 // максимальное количество одновременных подключений
-YMetrikaRequest.MAX_CLIENTS = 2;
+YMetrikaRequest.MAX_ACTIVE_CLIENTS = 2;
 // таймаут ожидания выполнения очереди запросов
 YMetrikaRequest.MAX_WAIT_REQUEST_TIMEOUT = 1000 * 60;
 // время повторной проверки на возможность выполнения запроса
