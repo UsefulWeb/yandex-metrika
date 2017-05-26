@@ -1,0 +1,25 @@
+{
+  "name": "yandex-metrika",
+  "email" : "neizerth@gmail.com",
+  "version": "0.1",
+  "description": "Библиотека для работы с API Яндекс.Метрики",
+  "main": "src/YMetrikaRequest.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UsefulWeb/yandex-metrika.git"
+  },
+  "keywords": [
+    "яндекс",
+    "yandex",
+    "метрика"
+  ],
+  "author": "Vladimir Yazykov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/UsefulWeb/yandex-metrika/issues"
+  },
+  "homepage": "https://github.com/UsefulWeb/yandex-metrika#readme"
+}

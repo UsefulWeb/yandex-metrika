@@ -1,0 +1,33 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "idiomatic"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 8
+  },
+  "env": {
+    "node": true,
+    "es6": true
+  },
+  "rules": {
+    "semi": ["error", "always"],
+    "one-var": [2, {
+        "var": "always",
+        "let": "always"
+    }],
+    "camelcase": ["error", {
+      "properties": "never"
+    }],
+    "no-console": ["error", "allow": ["log", "warn", "error"]],
+    "valid-jsdoc": "error",
+    "require-jsdoc": ["error", {
+      "require": {
+        "FunctionDeclaration": true,
+        "MethodDefinition": true,
+        "ClassDeclaration": true,
+        "ArrowFunctionExpression": true
+      }
+    }]
+  }
+}
