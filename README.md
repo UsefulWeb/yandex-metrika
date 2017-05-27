@@ -1,5 +1,5 @@
 # yandex-metrika
-[![NPM](https://www.npmjs.com/package/yandex-metrika)](https://img.shields.io/npm/v/yandex-metrika.svg)
+[![NPM](https://img.shields.io/npm/v/yandex-metrika.svg)](https://www.npmjs.com/package/yandex-metrika)
 [![Code Climate](https://codeclimate.com/github/UsefulWeb/yandex-metrika/badges/gpa.svg)](https://codeclimate.com/github/UsefulWeb/yandex-metrika)
 
 Библиотека для API Яндекс.Метрики 
