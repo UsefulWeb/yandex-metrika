@@ -1,9 +1,12 @@
 # yandex-metrika
+[![NPM](https://www.npmjs.com/package/yandex-metrika)](https://img.shields.io/npm/v/yandex-metrika.svg)
+[![Code Climate](https://codeclimate.com/github/UsefulWeb/yandex-metrika/badges/gpa.svg)](https://codeclimate.com/github/UsefulWeb/yandex-metrika)
+
 Библиотека для API Яндекс.Метрики 
 Для работы с данной библиотекой вам необходимо иметь OAuth-токен приложения Яндекс.Метрики. 
 Для того, чтобы создать приложение:
 - перейдите [по этой ссылке](https://oauth.yandex.ru/client/new) и добавьте в правах пункт Яндекс.Метрика.
-- Получите OAuth токен по инструкции, описанной [здесь] (https://tech.yandex.ru/oauth/doc/dg/concepts/ya-oauth-intro-docpage/)
+- Получите OAuth токен по инструкции, описанной [здесь](https://tech.yandex.ru/oauth/doc/dg/concepts/ya-oauth-intro-docpage/)
 
 ## Установка
 ```
